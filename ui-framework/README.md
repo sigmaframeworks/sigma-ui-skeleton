@@ -8,6 +8,8 @@
 mkdir <project_dir>
 cd <project_dir>
 au new --here
+
+npm install sigma-ui-framework --save
 ```
 
 ## 2. Replace generate files with skeleton files
