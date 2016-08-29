@@ -5,43 +5,5 @@
 -->
 <template>
   <ui-page page-title="Dashboard">
-    <ui-content scroll padded>
-      <h1>Value Converters</h1>
-      <hr/>
-      <ui-row>
-        <ui-column size="md-6">
-          <ui-panel>
-            <ui-header>Markdown</ui-header>
-            <ui-body padded>
-              <div class="ui-markdown" innerhtml.bind="'### Kitchensink\n\A markdown converter example\n\n```js\nexport class Test{}\n```' | markdown"></div>
-            </ui-body>
-          </ui-panel>
-          <ui-panel>
-            <ui-header>JSON</ui-header>
-            <ui-body padded>
-              <p>Simple: ${{d:1,t:'Hello World',a:[1,2,3,4]} | json}</p>
-            </ui-body>
-          </ui-panel>
-        </ui-column>
-        <ui-column size="md-6">
-          <ui-panel>
-            <ui-header>Dates</ui-header>
-            <ui-body padded>
-              <p>Simple: ${'2016/08/01' | date}</p>
-              <p>From Now: ${'2016/08/01' | fromNow}</p>
-            </ui-body>
-          </ui-panel>
-          <ui-panel>
-            <ui-header>Numbers</ui-header>
-            <ui-body padded>
-              <p>Simple: ${189.97 | number}</p>
-              <p>Simple: ${1892742.97 | number:'0.00a'}</p>
-              <p>Currency: <span innerhtml.bind="189.97 | currency:'aed'"></span></p>
-              <p>Percent: ${1.89 | percent}</p>
-            </ui-body>
-          </ui-panel>
-        </ui-column>
-      </ui-row>
-    </ui-content>
   </ui-page>
 </template>

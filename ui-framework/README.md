@@ -9,7 +9,7 @@ mkdir <project_dir>
 cd <project_dir>
 au new --here
 
-npm install sigma-ui-framework --save
+npm install sigma-ui-framework lodash --save
 ```
 
 ## 2. Replace generate files with skeleton files
@@ -35,7 +35,6 @@ cp -r <skeleton_dir>/* .
       "lodash",
       "moment",
       "numeral",
-      "aurelia-validatejs",
       "aurelia-fetch-client",
       {
         "name": "text",
@@ -46,11 +45,29 @@ cp -r <skeleton_dir>/* .
         "path": "../node_modules/kramed/lib",
         "main": "kramed"
       },
+      // ---- start
+      // Remove if not using i18n
       {
-        "name": "validate.js",
-        "path": "../node_modules/validate.js",
-        "main": "validate"
+        "name": "intl",
+        "path": "../node_modules/intl/dist",
+        "main": "intl"
       },
+      {
+        "name": "i18next",
+        "path": "../node_modules/i18next/dist/umd",
+        "main": "i18next"
+      },
+      {
+        "name": "i18next-xhr-backend",
+        "path": "../node_modules/i18next-xhr-backend/dist/umd",
+        "main": "i18nextXHRBackend"
+      },
+      {
+        "name": "aurelia-i18n",
+        "path": "../node_modules/aurelia-i18n/dist/amd",
+        "main": "aurelia-i18n"
+      },
+      // ---- end
       {
         "name": "aurelia-validation",
         "path": "../node_modules/aurelia-validation/dist/amd",
@@ -63,7 +80,7 @@ cp -r <skeleton_dir>/* .
       },
       {
         "name": "sigma-ui-framework",
-        "path": "../node_modules/sigma-ui-framework",
+        "path": "../node_modules/sigma-ui-framework/dist",
         "main": "sigma-ui-framework"
       }
     ]
