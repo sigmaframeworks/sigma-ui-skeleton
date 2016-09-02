@@ -29,7 +29,12 @@ cp -r <skeleton_dir>/* .
     "name": "ui-framework.js",
     "prepend": [
       "node_modules/whatwg-fetch/fetch.js",
-      "node_modules/fabric/dist/fabric.js"
+      "node_modules/fabric/dist/fabric.js",
+      "node_modules/amcharts/dist/amcharts/amcharts.js",
+      "node_modules/amcharts/dist/amcharts/pie.js",
+      "node_modules/amcharts/dist/amcharts/serial.js",
+      "node_modules/amcharts/dist/amcharts/themes/light.js",
+      "node_modules/amcharts/dist/amcharts/plugins/export/export.js"
     ],
     "dependencies": [
       "lodash",
@@ -72,11 +77,6 @@ cp -r <skeleton_dir>/* .
         "name": "aurelia-validation",
         "path": "../node_modules/aurelia-validation/dist/amd",
         "main": "aurelia-validation"
-      },
-      {
-        "name": "amcharts",
-        "path": "../node_modules/amcharts/dist",
-        "main": "amcharts/amcharts"
       },
       {
         "name": "sigma-ui-framework",

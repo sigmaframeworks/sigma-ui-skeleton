@@ -1,6 +1,9 @@
 import {Aurelia} from 'aurelia-framework'
 import environment from './environment';
 
+// Uncomment when using charts
+// import "amcharts/amcharts";
+
 //Configure Bluebird Promises.
 //Note: You may want to use environment-specific configuration.
 (<any>Promise).config({
@@ -14,6 +17,7 @@ export function configure(aurelia: Aurelia) {
         .standardConfiguration()
         .feature('resources')
         .plugin('aurelia-validation')
+        .plugin('aurelia-ui-virtualization')
         // Uncomment when using aurelia-i18n
         /****
         .plugin('aurelia-i18n', (instance) => {
@@ -44,6 +48,11 @@ export function configure(aurelia: Aurelia) {
             //     .apiUrl('https://api.domain.com')
             //     .apiHeaders({ 'X-API-VERSION': '1' })
             //     .addAuthHeader(true);
+
+            // Incase need to call different api when testing
+            // if (environment.testing) {
+            // config.apiUrl('https://api-test.domain.com')
+            // }
         });
 
     if (environment.debug) {

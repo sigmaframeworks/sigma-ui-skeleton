@@ -21,8 +21,8 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('dist', function() {
-    return gulp.src(['./index.html', './browserconfig.xml', './manifest.json', 'node_modules/sigma-ui-framework/**/*',
-            './fonts/**/*', './markdown/**/*', './styles/**/*', './images/**/*', './scripts/**/*'
+    return gulp.src(['./index.html', 'node_modules/sigma-ui-framework/dist/**/*',
+            './fonts/**/*', './styles/**/*', './images/**/*', './locales/**/*', './favicons/**/*', './scripts/**/*'
         ], {
             base: './'
         })
