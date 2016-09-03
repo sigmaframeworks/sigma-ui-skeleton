@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var compass = require('gulp-compass'),
     plumber = require('gulp-plumber');
+var del = require('del');
+var distFolder = './dist';
 
 // SASS/Compass compiler
 gulp.task('sass', function(done) {
@@ -20,13 +22,22 @@ gulp.task('sass', function(done) {
     done();
 });
 
+gulp.task('clean', function() {
+    return del([distFolder + '/*', '!' + distFolder + '/CNAME'], {
+        force: true
+    });
+});
+
 gulp.task('dist', function() {
     return gulp.src(['./index.html', 'node_modules/sigma-ui-framework/dist/**/*',
             './fonts/**/*', './styles/**/*', './images/**/*', './locales/**/*', './favicons/**/*', './scripts/**/*'
         ], {
             base: './'
         })
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(distFolder));
 });
 
-gulp.task('production', gulp.series('sass', 'dist'));
+gulp.task('production', gulp.series('clean', 'sass', 'dist',
+    function(done) {
+        done();
+    }));

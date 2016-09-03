@@ -29,12 +29,14 @@ cp -r <skeleton_dir>/* .
     "name": "ui-framework.js",
     "prepend": [
       "node_modules/whatwg-fetch/fetch.js",
+      // add if using amCharts
       "node_modules/fabric/dist/fabric.js",
       "node_modules/amcharts/dist/amcharts/amcharts.js",
       "node_modules/amcharts/dist/amcharts/pie.js",
       "node_modules/amcharts/dist/amcharts/serial.js",
       "node_modules/amcharts/dist/amcharts/themes/light.js",
       "node_modules/amcharts/dist/amcharts/plugins/export/export.js"
+      // ------------
     ],
     "dependencies": [
       "lodash",
@@ -50,13 +52,14 @@ cp -r <skeleton_dir>/* .
         "path": "../node_modules/kramed/lib",
         "main": "kramed"
       },
-      // ---- start
-      // Remove if not using i18n
+      // add if using datagrid with large data
       {
-        "name": "intl",
-        "path": "../node_modules/intl/dist",
-        "main": "intl"
+        "name": "aurelia-ui-virtualization",
+        "path": "../node_modules/aurelia-ui-virtualization/dist/amd",
+        "main": "aurelia-ui-virtualization"
       },
+      // ------------
+      // add if using `aurelia-i18n` plugin
       {
         "name": "i18next",
         "path": "../node_modules/i18next/dist/umd",
@@ -72,15 +75,10 @@ cp -r <skeleton_dir>/* .
         "path": "../node_modules/aurelia-i18n/dist/amd",
         "main": "aurelia-i18n"
       },
-      // ---- end
-      {
-        "name": "aurelia-validation",
-        "path": "../node_modules/aurelia-validation/dist/amd",
-        "main": "aurelia-validation"
-      },
+      // ------------
       {
         "name": "sigma-ui-framework",
-        "path": "../node_modules/sigma-ui-framework/dist",
+        "path": "../node_modules/sigma-ui-framework",
         "main": "sigma-ui-framework"
       }
     ]
