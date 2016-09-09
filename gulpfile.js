@@ -29,7 +29,9 @@ gulp.task('clean', function() {
 });
 
 gulp.task('dist', function() {
-    return gulp.src(['./index.html', 'node_modules/sigma-ui-framework/dist/**/*',
+    return gulp.src(['./index.html',
+            'node_modules/sigma-ui-framework/dist/**/*.html',
+            'node_modules/sigma-ui-framework/dist/**/*.js',
             './fonts/**/*', './styles/**/*', './images/**/*', './locales/**/*', './favicons/**/*', './scripts/**/*'
         ], {
             base: './'

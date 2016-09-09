@@ -1,9 +1,11 @@
 # Sigma UI Framework
-### Skeleton for `aurelia-cli` based project
 
-----
+## Skeleton for `aurelia-cli` based project
 
-## 1. Create an aurelia project
+--------------------------------------------------------------------------------
+
+## 1\. Create an aurelia project
+
 ```bash
 mkdir <project_dir>
 cd <project_dir>
@@ -12,20 +14,27 @@ au new --here
 npm install sigma-ui-framework lodash --save
 ```
 
-## 2. Replace generate files with skeleton files
+## 2\. Replace generate files with skeleton files
+
 ```bash
 cp -r <skeleton_dir>/* .
 ```
 
-## 3. Update `aurelia_project/aurelia.json`
+## 3\. Update `aurelia_project/aurelia.json`
 
-* Change `"stub": true` to `"stub": false`
+- Change `"stub": true` to `"stub": false`
 
-* Add to `transpiler/dtsSource` `"./node_modules/sigma-ui-framework/dist/typings/**/*.d.ts"`
+- Add to `transpiler/dtsSource`
 
-* Add to `bundles` object after `app-bundle.js`
-```json
-{
+  ```
+  "./node_modules/sigma-libs/typings/*.d.ts",
+  "./node_modules/sigma-ui-framework/dist/typings/**/*.d.ts"`
+  ```
+
+- Add to `bundles` object after `app-bundle.js`
+
+  ```json
+  {
     "name": "ui-framework.js",
     "prepend": [
       "node_modules/whatwg-fetch/fetch.js",
@@ -77,18 +86,22 @@ cp -r <skeleton_dir>/* .
       },
       // ------------
       {
+	    "name": "sigma-libs",
+	    "path": "../node_modules/sigma-libs",
+	    "main": "index"
+      }, {
         "name": "sigma-ui-framework",
         "path": "../node_modules/sigma-ui-framework",
         "main": "sigma-ui-framework"
       }
     ]
-}
-```
+  }
+  ```
 
-## 4. development and Deployment
+## 4\. development and Deployment
 
-* `au run --watch`: Run project in development mode, serves the built project on `localhost:9000`
+- `au run --watch`: Run project in development mode, serves the built project on `localhost:9000`
 
-* `au build --env prod`: Build project for production deployment
+- `au build --env prod`: Build project for production deployment
 
-* `gulp prod`: Build sass files and copy required files to deployment ready folder `dist/`
+- `gulp prod`: Build sass files and copy required files to deployment ready folder `dist/`
