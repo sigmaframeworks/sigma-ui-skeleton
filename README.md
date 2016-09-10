@@ -70,6 +70,11 @@ cp -r <skeleton_dir>/* .
       // ------------
       // add if using `aurelia-i18n` plugin
       {
+        "name": "intl",
+        "path": "../node_modules/intl/dist",
+        "main": "intl"
+      },
+      {
         "name": "i18next",
         "path": "../node_modules/i18next/dist/umd",
         "main": "i18next"
@@ -86,10 +91,11 @@ cp -r <skeleton_dir>/* .
       },
       // ------------
       {
-	    "name": "sigma-libs",
-	    "path": "../node_modules/sigma-libs",
-	    "main": "index"
-      }, {
+        "name": "sigma-libs",
+        "path": "../node_modules/sigma-libs",
+        "main": "index"
+      }, 
+      {
         "name": "sigma-ui-framework",
         "path": "../node_modules/sigma-ui-framework",
         "main": "sigma-ui-framework"

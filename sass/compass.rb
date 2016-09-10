@@ -10,6 +10,7 @@ javascripts_dir = "/src"
 fonts_dir = "/fonts"
 
 add_import_path "node_modules/sigma-ui-framework/sass/"
+add_import_path "node_modules/sigma-libs/sass/"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
