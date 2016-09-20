@@ -1,3 +1,28 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
 <template>
-  <h1>${message}</h1>
+  <fs-viewport menu-end splash-progress splash-progress-color="white" appready.trigger="ready()">
+    <fs-list>
+      <fs-list-group>
+        <fs-list-link click.trigger="app.mainViewBack('home/view.html')">
+          <fs-item-title>Home</fs-item-title>
+        </fs-list-link>
+        <fs-list-link href="card/view.html">
+          <fs-item-title>Cards</fs-item-title>
+        </fs-list-link>
+        <fs-list-link href="list/view.html">
+          <fs-item-title>Lists</fs-item-title>
+        </fs-list-link>
+        <fs-list-link href="inputs/view.html">
+          <fs-item-title>Inputs</fs-item-title>
+        </fs-list-link>
+        <fs-list-link href="swiper/view.html">
+          <fs-item-title>Swiper</fs-item-title>
+        </fs-list-link>
+      </fs-list-group>
+    </fs-link>
+  </fs-viewport>
 </template>

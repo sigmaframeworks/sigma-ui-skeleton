@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Aurelia</title>
+
+    <link rel="stylesheet" disabled="disabled" href="css/app-ios.css" title="ios"/>
+    <link rel="stylesheet" disabled="disabled" href="css/app-material.css" title="android"/>
+    <link rel="stylesheet" href="css/app-common.css"/>
   </head>
 
-  <body aurelia-app="main">
+  <body class="navbar-dark">
+    <div class="fs-splash">
+      <span class="preloader preloader-white">
+        <span class="preloader-inner">
+          <span class="preloader-inner-gap"></span>
+          <span class="preloader-inner-left">
+            <span class="preloader-inner-half-circle"></span>
+          </span>
+          <span class="preloader-inner-right">
+            <span class="preloader-inner-half-circle"></span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div aurelia-app="main" class="app-container"></div>
     <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
   </body>
+
 </html>

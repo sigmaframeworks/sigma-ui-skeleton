@@ -19,7 +19,9 @@
     "./src/**/*.ts",
     "./test/**/*.ts",
     "./typings/index.d.ts",
-    "./custom_typings/**/*.d.ts"
+    "./custom_typings/**/*.d.ts",
+    "./node_modules/sigma-libs/typings/*.d.ts",
+    "./node_modules/sigma-ui-frameseven/dist/typings/**/*.d.ts"
   ],
   "atom": {
     "rewriteTsconfig": false
