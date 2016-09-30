@@ -57,6 +57,11 @@ cp -r <skeleton_dir>/* .
         "path": "../scripts/text"
       },
       {
+        "name": "tether",
+        "path": "../node_modules/tether/dist/js",
+        "main": "tether"
+      },
+      {
         "name": "kramed",
         "path": "../node_modules/kramed/lib",
         "main": "kramed"
