@@ -6,11 +6,11 @@ http_dir="/"
 css_dir = "/styles"
 sass_dir = "/sass"
 images_dir = "/images"
-javascripts_dir = "/src"
+javascripts_dir = "/app"
 fonts_dir = "/fonts"
 
-add_import_path "node_modules/sigma-ui-framework/sass/"
 add_import_path "node_modules/sigma-libs/sass/"
+add_import_path "node_modules/sigma-ui-framework/sass/"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -21,7 +21,6 @@ relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
-
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:

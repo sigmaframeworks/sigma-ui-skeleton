@@ -1,0 +1,40 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016
+// @license     : MIT
+-->
+<template>
+  <ui-page>
+    <ui-section center middle>
+      <ui-panel>
+        <ui-panel-body padded>
+          <h4 class="ui-text-center">
+            <img align="center" src="../images/logo.png" width="96"/>
+          </h4>
+          <p class="ui-font-big ui-text-center">
+            <strong>Sigma UI</strong><br/>Please sign-in to continue</p>
+          <hr/>
+          <ui-form padded>
+            <p class="ui-bg-danger" if.bind="error">${error}</p>
+            <ui-input-group width="18em">
+              <ui-input-label required align-top>Username</ui-input-label>
+              <ui-input placeholder="Username..." value.bind="model.username & validate" email></ui-input>
+            </ui-input-group>
+            <ui-input-group width="18em">
+              <ui-input-label required align-top>Password</ui-input-label>
+              <ui-input placeholder="Password..." value.bind="model.password & validate" password></ui-input>
+            </ui-input-group>
+            <ui-option-group>
+              <ui-checkbox checked.bind="remember">Keep me signed in</ui-checkbox>
+            </ui-option-group>
+            <p class="ui-text-center">
+              <ui-button primary>Login</ui-button>
+            </p>
+          </ui-form>
+          <hr/>
+          <p class="ui-font-small ui-text-center">Version ${constants.App.Version}</p>
+        </ui-panel-body>
+      </ui-panel>
+    </ui-section>
+  </ui-page>
+</template>

@@ -1,3 +1,18 @@
 <template>
-  <ui-viewport subtitle="Kitchensink"></ui-viewport>
+  <ui-viewport router.bind="router">
+    <ui-app-header>
+      <ui-app-title src="../images/logo.png">
+        <h5>${router.title} -
+          <small>Version 2</small>
+        </h5>
+      </ui-app-title>
+      <ui-filler></ui-filler>
+    </ui-app-header>
+    <ui-router-view></ui-router-view>
+    <ui-app-footer>
+      <span>Version 2.0.0</span>
+      <span>Sigma Frameworks</span>
+      <span>Copyright &copy; 2016, Adarsh Pastakia</span>
+    </ui-app-footer>
+  </ui-viewport>
 </template>
