@@ -14,7 +14,7 @@
           <p class="ui-font-big ui-text-center">
             <strong>Sigma UI</strong><br/>Please sign-in to continue</p>
           <hr/>
-          <ui-form padded>
+          <ui-form padded submit.trigger="doLogin()" busy.bind="app.IsHttpInUse">
             <p class="ui-bg-danger" if.bind="error">${error}</p>
             <ui-input-group width="18em">
               <ui-input-label required align-top>Username</ui-input-label>
@@ -28,7 +28,7 @@
               <ui-checkbox checked.bind="remember">Keep me signed in</ui-checkbox>
             </ui-option-group>
             <p class="ui-text-center">
-              <ui-button primary>Login</ui-button>
+              <ui-button primary click.trigger="doLogin()">Login</ui-button>
             </p>
           </ui-form>
           <hr/>

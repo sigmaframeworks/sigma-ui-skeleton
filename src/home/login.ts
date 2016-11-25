@@ -12,7 +12,7 @@ export class Login {
     password: ''
   }
 
-  constructor(public controller: ValidationController, public appState: UIApplication, public httpClient: UIHttpService) {
+  constructor(public controller: ValidationController, public app: UIApplication, public httpClient: UIHttpService) {
     ValidationRules
       .ensure((m: any) => m.username)
       .required()
@@ -23,8 +23,8 @@ export class Login {
   }
 
   bind() {
-    this.model.username = this.appState.persist('AppUsername');
-    this.model.password = this.appState.persist('AppPassword');
+    this.model.username = this.app.persist('AppUsername');
+    this.model.password = this.app.persist('AppPassword');
     this.remember = this.model.password != null;
   }
 
@@ -41,9 +41,9 @@ export class Login {
 
   postLogin() {
     this.httpClient
-      .post('/login', this.model)
+      .post('/login', { userId: this.model.username, password: this.model.password })
       .then(resp => {
-        this.appState.login(this.model.username, this.remember ? this.model.password : null, resp.token);
+        this.app.login(this.model.username, this.remember ? this.model.password : null, resp.token);
       })
       .catch(e => this.error = e.message || e);
   }

@@ -116,6 +116,11 @@
           "main": "kramed"
         },
         {
+          "name": "aurelia-ui-virtualization",
+          "path": "../node_modules/aurelia-ui-virtualization/dist/amd",
+          "main": "aurelia-ui-virtualization"
+        },
+        {
           "name": "aurelia-validation",
           "path": "../node_modules/aurelia-validation/dist/amd",
           "main": "aurelia-validation"
